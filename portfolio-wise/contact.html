@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="https://unpkg.com/enter-view"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/abb4nir.css" />
+    <script defer src="main.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/0fa37f936f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="horizontal.js"></script>
+    <title>Contact</title>
+  </head>
+
+  <body class="gallery-page">
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class=""
+        ><img class="logo" src="images/logo-test.svg" alt=""
+      /></a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/kate-wise-98a78123b/">
+        <h3 id="h3"><i class="fa-brands fa-linkedin"></i></h3
+      ></a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <main>
+      <section>
+        <div class="contact">
+          <div>
+            <img class="contact-img" src="images/contact-me.png" alt="" />
+          </div>
+          <div>
+            <h1 id="h1">Contact</h1>
+            <h3 id="h3">
+              Any questions or queries? <br />
+              Fill out the form below and I will be in touch as soon as I can.
+            </h3>
+          </div>
+        </div>
+        <div class="container-form">
+          <form
+            target="_blank"
+            action="https://formsubmit.co/hello@katewise.co.nz"
+            method="POST"
+          >
+            <input type="hidden" name="_cc" value="kmbalderstone@gmail.com" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://katewise.co.nz/thanks.html"
+            />
+            <div class="form-group">
+              <div class="col">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group-2">
+              <textarea
+                placeholder="Your Message"
+                class="form-control"
+                name="message"
+                rows="10"
+                required
+              ></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-lg btn-dark btn-block">
+                SUBMIT
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="padding-footer">
+      <div class="logo-footer">
+        <figure>
+          <img src="images/logo-test.svg" alt="" />
+        </figure>
+      </div>
+      <ul class="footer-item-1">
+        <li><h3 id="h3">Ready to chat?</h3></li>
+        <li><h3 id="h3">hello@katewise.co.nz</h3></li>
+        <li><h3 id="h3">+64 27 636 3920</h3></li>
+      </ul>
+      <ul class="footer-item-2">
+        <li><h3 id="h3">Pages</h3></li>
+        <li>
+          <a href="about.html"><h3 id="h3">About</h3></a>
+        </li>
+        <li>
+          <a href="gallery.html"><h3 id="h3">Gallery</h3></a>
+        </li>
+        <li>
+          <a href="contact.html"><h3 id="h3">Contact</h3></a>
+        </li>
+      </ul>
+      <ul class="footer-item-3">
+        <li>
+          <a href="https://www.linkedin.com/in/kate-wise-98a78123b/">
+            <h3 id="h3"><i class="fa-brands fa-linkedin"></i></h3
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/k_a_t_e_o_/?hl=en">
+            <h3 id="h3"><i class="fa-brands fa-instagram"></i></h3
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@katewise2"
+            ><h3 id="h3"><i class="fa-brands fa-tiktok"></i></h3
+          ></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

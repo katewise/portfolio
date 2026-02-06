@@ -21,17 +21,25 @@ ${message}
       "content-type": "application/json",
     },
     body: JSON.stringify({
-      personalizations: [{ to: [{ email: "hello@knowhr.co.nz" }] }],
+      personalizations: [
+        {
+          to: [{ email: "hello@knowhr.co.nz" }],
+          headers: { "Reply-To": email }
+        }
+      ],
       from: {
         email: "hello@knowhr.co.nz",
-        name: "KnowHR Contact Form",
+        name: "KnowHR Contact Form"
       },
       subject: "New Contact Form Submission",
-      content: [{ type: "text/plain", value: body }],
+      content: [
+        { type: "text/plain", value: body }
+      ]
     }),
   });
 
   if (!response.ok) {
+    console.log(await response.text()); // debug line
     return new Response("Email failed", { status: 500 });
   }
 

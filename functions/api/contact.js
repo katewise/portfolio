@@ -23,7 +23,7 @@ ${message}
     body: JSON.stringify({
       personalizations: [{ to: [{ email: "hello@knowhr.co.nz" }] }],
       from: {
-        email: "no-reply@knowhr.co.nz",
+        email: "hello@knowhr.co.nz",
         name: "KnowHR Contact Form",
       },
       subject: "New Contact Form Submission",

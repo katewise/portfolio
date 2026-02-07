@@ -84,6 +84,16 @@ h3 {
   color: var(--black);
   font-size: 2vh;
 }
+.h3 {
+  font-family: "neue-kabel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+
+  line-height: 0.7cm;
+  color: var(--pink);
+  font-size: 2vh;
+}
 #h3 {
   font-family: "neue-kabel", sans-serif;
   font-weight: 400;
@@ -98,6 +108,7 @@ h3 {
   font-weight: 900;
   font-size: 1.5rem;
 }
+
 #h2 {
   font-family: "neue-kabel", sans-serif;
   font-weight: 600;
@@ -688,6 +699,7 @@ footer {
     font-style: normal;
     color: var(--white);
   }
+
   .wrapper {
     width: auto;
     gap: 1em;

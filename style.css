@@ -675,63 +675,7 @@ footer {
   flex-direction: column;
   gap: 11px;
 }
-<style>
-  .parallax-embed{
-    min-height: 110vh;
-    display: grid;
-    place-items: center;
-    padding: 8vh 5vw;
-    /* parallax-ish background */
-    background-image: url("your-background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* “parallax” feel on desktop */
-  }
 
-  .frame-shell{
-    width: min(1100px, 92vw);
-    height: min(700px, 70vh);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,.2);
-    background: #fff;
-  }
-
-  .frame-topbar{
-    height: 42px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0 14px;
-    background: #f3f3f3;
-    border-bottom: 1px solid rgba(0,0,0,.08);
-  }
-
-  .dot{
-    width: 10px; height: 10px; border-radius: 999px;
-    background: rgba(0,0,0,.18);
-    display: inline-block;
-  }
-
-  .open{
-    margin-left: auto;
-    font: 14px/1.1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    text-decoration: none;
-    color: rgba(0,0,0,.7);
-  }
-
-  iframe{
-    width: 100%;
-    height: calc(100% - 42px);
-    border: 0;
-  }
-
-  /* Mobile: background-attachment: fixed is often janky */
-  @media (max-width: 768px){
-    .parallax-embed{ background-attachment: scroll; }
-    .frame-shell{ height: 70vh; }
-  }
-</style>
 
 @media (max-width: 768px) {
   /* CSS rules for smaller screens */
@@ -756,7 +700,90 @@ footer {
     font-style: normal;
     color: var(--white);
   }
+.parallax-embed{
+    width: 100%;
+    padding: clamp(48px, 8vh, 96px) clamp(16px, 4vw, 48px);
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    align-items: center;
+    min-height: 100vh;         /* makes it feel like a moment on scroll */
 
+    /* OPTIONAL background (swap/remove as you like) */
+    /* background: linear-gradient(135deg, rgba(255, 192, 203, .35), rgba(173, 216, 230, .35)); */
+
+    /* Parallax-style background (only works if you set an image) */
+    /* background-image: url("your-background.jpg"); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  /* inner wrapper controls max-width */
+  .parallax-inner{
+    width: min(1200px, 100%);
+  }
+
+  /* the “browser window” */
+  .frame-shell{
+    width: 100%;
+    height: min(740px, 75vh);  /* big preview, responsive */
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(0,0,0,.18);
+    background: #fff;
+  }
+
+  /* top bar */
+  .frame-topbar{
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 14px;
+    background: rgba(245,245,245,1);
+    border-bottom: 1px solid rgba(0,0,0,.08);
+  }
+
+  .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(0,0,0,.18);
+    display: inline-block;
+  }
+
+  .open{
+    margin-left: auto;
+    font: 14px/1.1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    text-decoration: none;
+    color: rgba(0,0,0,.7);
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+  .open:hover{
+    background: rgba(0,0,0,.06);
+  }
+
+  /* iframe sizing fix (this is what stops it being tiny/left) */
+  .frame-shell iframe{
+    display: block;                 /* important: removes inline alignment quirks */
+    width: 100%;
+    height: calc(100% - 44px);      /* fill remaining space under topbar */
+    border: 0;
+  }
+
+  /* Mobile: background-attachment fixed can be janky */
+  @media (max-width: 768px){
+    .parallax-embed{
+      background-attachment: scroll;
+      min-height: auto;
+      padding: 40px 16px;
+    }
+    .frame-shell{
+      height: 70vh;
+      border-radius: 18px;
+    }
+  }
   .wrapper {
     width: auto;
     gap: 1em;

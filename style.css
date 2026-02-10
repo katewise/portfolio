@@ -675,6 +675,63 @@ footer {
   flex-direction: column;
   gap: 11px;
 }
+<style>
+  .parallax-embed{
+    min-height: 110vh;
+    display: grid;
+    place-items: center;
+    padding: 8vh 5vw;
+    /* parallax-ish background */
+    background-image: url("your-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* “parallax” feel on desktop */
+  }
+
+  .frame-shell{
+    width: min(1100px, 92vw);
+    height: min(700px, 70vh);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    background: #fff;
+  }
+
+  .frame-topbar{
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 14px;
+    background: #f3f3f3;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+  }
+
+  .dot{
+    width: 10px; height: 10px; border-radius: 999px;
+    background: rgba(0,0,0,.18);
+    display: inline-block;
+  }
+
+  .open{
+    margin-left: auto;
+    font: 14px/1.1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    text-decoration: none;
+    color: rgba(0,0,0,.7);
+  }
+
+  iframe{
+    width: 100%;
+    height: calc(100% - 42px);
+    border: 0;
+  }
+
+  /* Mobile: background-attachment: fixed is often janky */
+  @media (max-width: 768px){
+    .parallax-embed{ background-attachment: scroll; }
+    .frame-shell{ height: 70vh; }
+  }
+</style>
 
 @media (max-width: 768px) {
   /* CSS rules for smaller screens */

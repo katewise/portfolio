@@ -565,8 +565,8 @@ div.scroll-1 {
   display: none;
 }
 iframe {
-  width: 560px;
-  height: 315px;
+  width: 90%;
+  height: 90%;
 }
 .parralax-3 {
   background-image: url(./images/me-on-beach.jpg);
